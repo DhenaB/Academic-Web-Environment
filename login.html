@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivational App</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="login-screen">
+
+  <form id="authForm" class="login-form">
+    <h2>Welcome!</h2>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <br>
+    <div id="createAccountFields" style="display:none;">
+        <label for="username">Your Name:</label>
+        <input type="text" id="username" required>
+    </div>
+    <div class="button-group">
+        <button type="button" id="loginBtn">Login</button>
+        <button type="button" id="createAccountBtn" style="display:none;">Create Account</button>
+    </div>
+    <p id="createAccountLinkText">Don't have an account? <a href="#" id="createAccountLink">Create one</a></p>
+    <div id="loginLinkContainer" style="display: none;">
+        <p id="loginLinkText">Already have an account? <a href="login.html" id="loginLink">Login</a></p>
+    </div>
+    <p id="errorMessage"></p>
+    <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="App.js"></script>
+</body>
+</html>

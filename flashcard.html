@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards</title>
+  <link rel="stylesheet" type="text/css" href="flashcard.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="studytimer.html" id="studyTimerLink">Study Timer</a></li>
+            <li><a href="todo.html">To-Do List</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+    </nav>
+</header>
+  <h1>Flashcards</h1>
+  <div class="button-container">
+    <button id="goBackBtn">Home</button>
+    <button id="addFlashcardBtn">Add Flashcard</button>
+  </div>  
+  <div class="content-wrapper">
+    <div id="flashcardWrapper">
+      <div id="flashcardContainer">
+        <!-- Flashcards will be dynamically added here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Flashcard Modal -->
+  <div id="addFlashcardModal" class="flashcardModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Add Flashcard</h2>
+      <label for="questionInput">Question:</label>
+      <textarea id="questionInput"></textarea>
+      <label for="answerInput">Answer:</label>
+      <textarea id="answerInput"></textarea>
+      <button id="saveFlashcardBtn">Save</button>
+      <button id="cancelFlashcardBtn">Cancel</button>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="flashcard.js"></script>
+</body>
+</html>

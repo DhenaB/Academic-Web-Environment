@@ -1,0 +1,235 @@
+/* Style for flashcards */
+body {
+    font-family: 'Comic Sans MS';
+    background-image: url('image2.jpg');
+    display: flex; /* Use flexbox to arrange items */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+h1 {
+    margin-top: 20px; /* Adjust top margin of the h1 */
+    font-size: 30px;
+}
+.content-wrapper, .flashcardModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.flashcardModal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Adjusted for better centering */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Adjust width as per your requirement */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the flex items */
+  }
+  
+  /* Ensures that textarea fills the width of modal-content, with a max-width to prevent it from becoming too wide on larger screens */
+  textarea {
+      width: 90%; /* Adjust based on preference */
+      max-width: 500px; /* Prevents textareas from becoming too wide */
+      margin: 10px 0;
+      padding: 10px;
+  }
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#saveFlashcardBtn, #cancelFlashcardBtn {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    align-self: center; /* This centers the buttons in the flex container */
+}
+
+
+#flashcardWrapper {
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 90%;
+    max-width: 1600px;
+}
+
+#flashcardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.flashcard {
+    box-sizing: border-box;
+    margin: 10px auto;
+    padding: 20px;
+    max-width: 1600px;
+    min-width: 300px;
+    width: 100%;
+    word-wrap: break-word;
+    background-color: white; /* Light background for visibility */
+    border: 2px solid #72ccb6; /* Border to distinguish cards */
+    border-radius: 5px; /* Rounded corners */
+}
+
+@media (max-width: 768px) {
+    .flashcard {
+        width: 95%;
+        padding: 15px;
+        min-width: 250px;
+    }
+}
+  
+.flashcard:nth-child(odd) {
+    background-color: #ffeeed; 
+}
+
+.flashcard:nth-child(even) {
+    background-color: #86807694; /* Lighter gray */
+}
+
+.flashcard .question {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.flashcard .answer {
+    display: none; /* Hide answer by default */
+}
+
+.flashcard .answer.show {
+    display: block; /* Show answer when toggled */
+}
+.flashcard[contenteditable="true"] {
+    background-color: #f0f0f0;
+    border: 5px dashed #666;
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    z-index: 100;
+    visibility: hidden;
+    width: 120px; /* Adjust width as needed */
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0; /* Adjust padding as needed */
+    position: absolute;
+    left: 50%;
+    /* Center horizontally and move just below the flashcard */
+    transform: translateX(-50%) translateY(20px); /* Adjust translateY value as needed */
+    top: 100%; /* Start positioning from the bottom of the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Align the buttons vertically */
+    gap: 10px; /* Creates space between the buttons */
+}
+
+#goBackBtn, #addFlashcardBtn {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-family: 'Comic Sans MS';
+    font-size: 16px; /* Adjust font size as needed */
+    border-radius: 4px;
+    border: none;
+    background-color:#72ccb6; /* Background color for buttons */
+    color: black; /* Text color for buttons */
+    cursor: pointer;
+    margin: 5px; /* Add some margin around buttons */
+}
+
+#goBackBtn:hover, #addFlashcardBtn:hover {
+     background-color: #f2a19b; /* Darker background color on hover */
+}
+
+#saveFlashcardBtn, #cancelFlashcardBtn {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-family: 'Comic Sans MS';
+    font-size: 16px; /* Adjust font size as needed */
+    border-radius: 4px;
+    border: none;
+    background-color: #ebe8e8; /* Background color for buttons */
+    color: black; /* Text color for buttons */
+    cursor: pointer;
+    margin: 5px; /* Add some margin around buttons */
+}
+
+#saveFlashcardBtn:hover, #cancelFlashcardBtn:hover {
+     background-color: grey; /* Darker background color on hover */
+}
+header {
+    background-color: #72ccb6; /* Sets the background color of the header */
+    width: 100%; /* Ensures the header spans the full width of the page */
+    padding: 40px 0; /* Adds vertical padding to the header */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds subtle shadow for depth */
+    margin-top: 0;
+    /* No fixed positioning, so it does not stay at the top when scrolling */
+}
+
+nav ul {
+    list-style: none; /* Removes bullet points from the list */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Makes the list horizontal */
+    justify-content: center; /* Centers the list items */
+    align-items: center;
+    width: 100%; /* Ensures that the navigation list spans the full width */
+}
+
+nav li {
+    margin: 0 40px; /* Adds horizontal spacing between the links */
+}
+
+nav a {
+    text-decoration: none; /* Removes underline from links */
+    font-size: 30px;
+    color: black; /* Sets the link color */
+    font-weight: bold; /* Makes the font bold */
+}
+
+nav a:hover {
+    color:  #ffdfdb; /* Changes link color on hover for better interaction */
+}

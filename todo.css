@@ -1,0 +1,158 @@
+body {
+    font-family: 'Comic Sans MS';
+    background-image: url('image2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.todo-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-y: auto;
+    height: 230px;
+}
+
+#todoTable {
+    width: 100%;
+    table-layout: fixed; /* Added to ensure table cells maintain their size */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#todoTable th, #todoTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    word-wrap: break-word;
+    vertical-align: top; /* Align content at the top */
+}
+
+#todoTable th {
+    background-color: #f2f2f2;
+}
+
+.edit-input, .edit-textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.edit-textarea {
+    height: 60px; /* Adjust based on your needs for textarea */
+}
+
+.todo-input {
+    width: calc(100% - 24px);
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#goBackBtn {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-family: 'Comic Sans MS';
+    font-size: 16px; /* Adjust font size as needed */
+    border-radius: 4px;
+    border: none;
+    background-color:#72ccb6; /* Background color for buttons */
+    color: black; /* Text color for buttons */
+    cursor: pointer;
+    margin: 5px; /* Add some margin around buttons */
+    
+}
+
+#showInputsBtn {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-family: 'Comic Sans MS';
+    font-size: 16px; /* Adjust font size as needed */
+    border-radius: 4px;
+    border: none;
+    background-color:#72ccb6; /* Background color for buttons */
+    color: black; /* Text color for buttons */
+    cursor: pointer;
+    margin: 5px; /* Add some margin around buttons */
+}
+
+#addTaskBtn {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-family: 'Comic Sans MS';
+    font-size: 16px; /* Adjust font size as needed */
+    border-radius: 4px;
+    border: none;
+    background-color:#72ccb6; /* Background color for buttons */
+    color: black; /* Text color for buttons */
+    cursor: pointer;
+    margin: 5px; /* Add some margin around buttons */
+}
+#cancelTaskBtn {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-family: 'Comic Sans MS';
+    font-size: 16px; /* Adjust font size as needed */
+    border-radius: 4px;
+    border: none;
+    background-color:#72ccb6; /* Background color for buttons */
+    color: black; /* Text color for buttons */
+    cursor: pointer;
+    margin: 5px; /* Add some margin around buttons */
+}
+.todo-input[title]:hover::after {
+    content: attr(title);
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+}
+
+header {
+    background-color: #72ccb6; /* Sets the background color of the header */
+    width: 100%; /* Ensures the header spans the full width of the page */
+    padding: 20px 0; /* Adds vertical padding to the header */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds subtle shadow for depth */
+    margin-top: 0;
+    /* No fixed positioning, so it does not stay at the top when scrolling */
+}
+
+
+nav ul {
+    list-style: none; /* Removes bullet points from the list */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Makes the list horizontal */
+    justify-content: center; /* Centers the list items */
+    align-items: center;
+    width: 100%; /* Ensures that the navigation list spans the full width */
+}
+
+nav li {
+    margin: 0 40px; /* Adds horizontal spacing between the links */
+}
+
+nav a {
+    text-decoration: none; /* Removes underline from links */
+    font-size: 30px;
+    color: black; /* Sets the link color */
+    font-weight: bold; /* Makes the font bold */
+}
+
+nav a:hover {
+    color: #ffdfdb; /* Changes link color on hover for better interaction */
+}
+textarea.todo-input {
+    width: 100%; /* Adjust width to fit container */
+    height: 100px; /* Set a fixed height */
+    padding: 8px; /* Padding inside the textarea */
+    box-sizing: border-box; /* Includes padding in the width and height */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded borders */
+    resize: vertical; /* Allows vertical resize only */
+}

@@ -1,0 +1,98 @@
+/* General body styling */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-image: url('image2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    min-height: 100vh; /* Use viewport height to ensure full page height */
+    margin-bottom: 50px; /* Add space for the footer */
+}
+
+header {
+    background-color: #72ccb6;
+    width: 100%;
+    padding: 40px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav li {
+    margin: 0 40px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffdfdb;
+}
+
+/* Main content styles */
+main {
+    flex: 1; /* Ensures main content stretches to fill available space */
+    width: 100%; /* Ensure main content fills the width of the viewport */
+    overflow: auto; /* Enable scrolling if content overflows */
+}
+
+main section h2 {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+main section p {
+    font-size: 20px;
+    color: #061d039c;
+    text-align: left;
+    font-weight: bold;
+    padding: 0 15px;
+    margin: 10px 0;
+}
+
+main img {
+    width: 50%; /* Larger images as requested */
+    height: auto;
+    margin: 10px 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #72ccb6;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    main section p {
+        font-size: 14px; /* Adjusted font size for mobile */
+    }
+
+    main img {
+        width: 90%; /* Further adjust image size for better visibility on mobile */
+    }
+
+    nav a {
+        font-size: 20px; /* Smaller font size for navigation on mobile */
+    }
+}

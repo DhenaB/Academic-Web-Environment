@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Timer</title>
+    <link rel="stylesheet" type="text/css" href="timer.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="flashcard.html">Flashcards</a></li>
+                <li><a href="todo.html">To-Do List</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <h1>Study Timer</h1>
+    <p id="timer">00:00:00</p>
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+    <button id="resetButton">Reset</button>
+    <button id="goBackBtn">Back to Landing Page</button> <!-- Back button added -->
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="studytimer.js"></script>
+</body>
+</html>

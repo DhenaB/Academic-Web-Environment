@@ -1,0 +1,54 @@
+body {
+    font-family: 'Comic Sans MS';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('image2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white; /* Set text color to white */
+  }
+  
+  #userNameDisplay {
+    margin-bottom: 20px; /* Add spacing below the welcome text */
+    color: #72ccb6;
+  }
+  
+  #quoteDisplay {
+    text-align: center;
+    margin-bottom: 32px;
+    font-family: 'Comic Sans MS';
+    font-style: italic;
+    font-size: 36px;
+    color: black;
+}
+  
+  .button-group {
+    display: flex; /* Ensure buttons are displayed in a row */
+    gap: 10px; /* Add some spacing between buttons */
+  }
+  
+  .button-group button {
+    padding: 10px 16px;
+    font-family: 'Comic Sans MS';
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid grey;
+    background-color: #72ccb6;
+    color: black;
+    cursor: pointer;
+    margin-right: 8px; /* Add some spacing between the buttons */
+  }
+  
+  .button-group button:last-child {
+    margin-right: 0; /* Remove margin from the last button */
+  }
+  
+  .button-group button:hover {
+    background-color: #ffdfdb;
+  }
+  

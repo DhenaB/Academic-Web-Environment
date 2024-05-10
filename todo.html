@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" type="text/css" href="todo.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="flashcard.html">Flashcards</a></li>
+                <li><a href="studytimer.html" id="studyTimerLink">Study Timer</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>To-Do List</h1>
+    <button id="goBackBtn">Home</button> <!-- Go Back button -->
+    <div class="todo-container" id="todo-container">
+        <table id="todoTable">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Completed</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="todoList">
+            </tbody>
+        </table>
+    </div>
+
+<button id="showInputsBtn">Add New Task</button> <!-- Button to show input fields -->
+
+<div id="inputFields" style="display: none;">
+    <textarea id="taskInput" placeholder="Enter task" class="todo-input"></textarea>
+    <label for="dateInput">Enter Date below:</label>
+    <input type="date" id="dateInput" class="todo-input" title="Enter date by typing or click the calendar icon at the end.">
+    <label for="timeInput">Enter time below:</label>
+    <input type="time" id="timeInput" class="todo-input" title="Enter time by typing or click the clock icon at the end.">
+    <button id="addTaskBtn">Add Task</button>
+    <button id="cancelTaskBtn">Cancel</button>
+</div>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="todo.js"></script>
+</body>
+</html>
